@@ -8,6 +8,9 @@ header > h1 {
     flex-wrap: wrap;
 }
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 150px;
     margin: 5px;
@@ -16,7 +19,7 @@ header > h1 {
     cursor: pointer;
 }
 .button > p {
-    line-height: 150px;
+    /* line-height: 150px; */
     margin: 0;
     text-align: center;
 }
