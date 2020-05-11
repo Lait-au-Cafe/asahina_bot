@@ -9,6 +9,7 @@ header > h1 {
 }
 .button {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 150px;
@@ -16,10 +17,23 @@ header > h1 {
     margin: 5px;
     background-color: azure;
     border: double 5px lightslategray;
+    border-radius: 20px;
     cursor: pointer;
 }
 .button > p {
     /* line-height: 150px; */
     margin: 0;
     text-align: center;
+}
+
+.button.basic {
+    background-color: lemonchiffon;
+}
+
+.button.reply {
+    background-color: bisque;
+}
+
+.button.special {
+    background-color: lavender;
 }
