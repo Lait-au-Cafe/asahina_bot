@@ -13,6 +13,7 @@ header > h1 {
     margin: 5px;
     background-color: azure;
     border: double 5px lightslategray;
+    cursor: pointer;
 }
 .button > p {
     line-height: 150px;
