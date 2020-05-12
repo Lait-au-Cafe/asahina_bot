@@ -148,11 +148,12 @@ header > h1 {
 .button.basic {
     background-color: lemonchiffon;
 }
-
 .button.reply {
     background-color: bisque;
 }
-
+.button.longer {
+    background-color: paleturquoise;
+}
 .button.special {
     background-color: lavender;
 }
