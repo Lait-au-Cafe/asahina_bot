@@ -88,6 +88,21 @@ header > h1 {
     background-color: lightpink;
 }
 
+
+.remove_btn {
+    position: absolute;
+    top: 5px; right: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: x-large;
+    /* color: white; */
+    /* background-color: red; */
+    /* border: solid 2px red;
+    border-radius: 15px; */
+    text-align: center;
+    line-height: 30px;
+}
+
 #playlist {
     flex: 1;
     color: gray;
@@ -112,6 +127,7 @@ header > h1 {
     flex-wrap: wrap;
 }
 .button {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;

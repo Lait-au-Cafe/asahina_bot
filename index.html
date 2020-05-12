@@ -5,6 +5,7 @@
   <title>朝比奈bot</title>
   <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -30,14 +31,14 @@
         </div>
     </header>
     <div class="container">
-        <div class="side_bar" dropzone="copy">
+        <div class="side_bar">
             <div id="controller">
                 <ul>
                     <li id="play_all_btn">再生</li>
                     <li id="remove_all_btn">全消去</li>
                 </ul>
             </div>
-            <div id="playlist">
+            <div id="playlist" dropzone="copy">
                 ここにボタンをドラッグすると連続再生ができます．
             </div>
         </div>
@@ -161,7 +162,18 @@
             if(!is_locked) {
                 let template = document.createElement('template');
                 template.innerHTML = e.originalEvent.dataTransfer.getData('text/html');
-                $('#playlist').append(template.content.firstChild);
+                let btn_body = template.content.firstChild;
+                btn_body.setAttribute('draggable', false);
+
+                template = document.createElement('template');
+                template.innerHTML = '<div class="remove_btn"><i class="far fa-trash-alt"></i></div>';
+                let remove_btn = template.content.firstChild;
+                $(remove_btn).on('click', () => {
+                    $(btn_body).remove();
+                });
+
+                btn_body.appendChild(remove_btn);
+                $('#playlist').append(btn_body);
             }
         });
 
@@ -204,6 +216,10 @@
             if(!is_locked){
                 $('#playlist .button').remove();
             }
+        });
+
+        $('.button_area').on('dragover', (e) => {
+            e.originalEvent.preventDefault();
         });
     </script>
 </body>
