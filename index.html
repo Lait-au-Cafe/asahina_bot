@@ -30,97 +30,180 @@
         </div>
     </header>
     <div class="container">
-        <div class="button basic">
-            <p>ナイスですっ!!</p>
-            <audio src="audio/nice.wav"></audio>
+        <div class="side_bar" dropzone="copy">
+            <div id="controller">
+                <ul>
+                    <li id="play_all_btn">再生</li>
+                    <li id="remove_all_btn">全消去</li>
+                </ul>
+            </div>
+            <div id="playlist">
+                ここにボタンをドラッグすると連続再生ができます．
+            </div>
         </div>
-        <div class="button basic">
-            <p>GG!!</p>
-            <audio src="audio/gg.wav"></audio>
-        </div>
-        <div class="button basic">
-            <p>あらあら</p>
-            <audio src="audio/arar.wav"></audio>
-        </div>
-        <div class="button reply">
-            <p>はい!</p>
-            <audio src="audio/yes.wav"></audio>
-        </div>
-        <div class="button reply">
-            <p>ふん!</p>
-            <audio src="audio/hun.wav"></audio>
-        </div>
-        <div class="button reply">
-            <p>はぁ?</p>
-            <audio src="audio/what.wav"></audio>
-        </div>
-        <div class="button reply">
-            <p>ｱﾊｰw</p>
-            <audio src="audio/aha.wav"></audio>
-        </div>
-        <div class="button">
-            <p>パパ!</p>
-            <audio src="audio/papa3.wav"></audio>
-        </div>
-        <div class="button">
-            <p>最悪w</p>
-            <audio src="audio/so_bad.wav"></audio>
-        </div>
-        <div class="button">
-            <p>やったな…w</p>
-            <audio src="audio/yattana.wav"></audio>
-        </div>
-        <div class="button">
-            <p>いやきっ…m</p>
-            <audio src="audio/gross.wav"></audio>
-        </div>
-        <div class="button">
-            <p>お可愛いこと</p>
-            <audio src="audio/so_cute.wav"></audio>
-        </div>
-        <div class="button">
-            <p>任せてくださいよ</p>
-            <audio src="audio/leave_it_to_me.wav"></audio>
-        </div>
-        <div class="button">
-            <p>フォローありがとうございます!</p>
-            <audio src="audio/thx_for_following.wav"></audio>
-        </div>
-        <div class="button">
-            <p>感謝します!</p>
-            <audio src="audio/appreciate.wav"></audio>
-        </div>
-        <div class="button">
-            <p>せんきゅ!</p>
-            <audio src="audio/thx.wav"></audio>
-        </div>
-        <div class="button">
-            <p>死んでる～w</p>
-            <audio src="audio/dying.wav"></audio>
-        </div>
-        <div class="button">
-            <p>死んできます!!</p>
-            <audio src="audio/gonna_die.wav"></audio>
-        </div>
-        <div class="button">
-            <p>でっけぇ虫いんな</p>
-            <audio src="audio/big_bug.wav"></audio>
-        </div>
-        <div class="button">
-            <p>認知してぇ!</p>
-            <audio src="audio/accept.wav"></audio>
-        </div>
-        <div class="button special">
-            <p>啼け</p>
-            <p>(なかひろ)チーズ</p>
-            <audio src="audio/cheese_sum2.wav"></audio>
+        <div class="button_area">
+            <div class="button basic">
+                <p>ナイスですっ!!</p>
+                <audio src="audio/nice.wav"></audio>
+            </div>
+            <div class="button basic">
+                <p>GG!!</p>
+                <audio src="audio/gg.wav"></audio>
+            </div>
+            <div class="button basic">
+                <p>あらあら</p>
+                <audio src="audio/arar.wav"></audio>
+            </div>
+            <div class="button reply">
+                <p>はい!</p>
+                <audio src="audio/yes.wav"></audio>
+            </div>
+            <div class="button reply">
+                <p>ふん!</p>
+                <audio src="audio/hun.wav"></audio>
+            </div>
+            <div class="button reply">
+                <p>はぁ?</p>
+                <audio src="audio/what.wav"></audio>
+            </div>
+            <div class="button reply">
+                <p>ｱﾊｰw</p>
+                <audio src="audio/aha.wav"></audio>
+            </div>
+            <div class="button">
+                <p>パパ!</p>
+                <audio src="audio/papa3.wav"></audio>
+            </div>
+            <div class="button">
+                <p>最悪w</p>
+                <audio src="audio/so_bad.wav"></audio>
+            </div>
+            <div class="button">
+                <p>やったな…w</p>
+                <audio src="audio/yattana.wav"></audio>
+            </div>
+            <div class="button">
+                <p>いやきっ…m</p>
+                <audio src="audio/gross.wav"></audio>
+            </div>
+            <div class="button">
+                <p>お可愛いこと</p>
+                <audio src="audio/so_cute.wav"></audio>
+            </div>
+            <div class="button">
+                <p>任せてくださいよ</p>
+                <audio src="audio/leave_it_to_me.wav"></audio>
+            </div>
+            <div class="button">
+                <p>フォローありがとうございます!</p>
+                <audio src="audio/thx_for_following.wav"></audio>
+            </div>
+            <div class="button">
+                <p>感謝します!</p>
+                <audio src="audio/appreciate.wav"></audio>
+            </div>
+            <div class="button">
+                <p>せんきゅ!</p>
+                <audio src="audio/thx.wav"></audio>
+            </div>
+            <div class="button">
+                <p>死んでる～w</p>
+                <audio src="audio/dying.wav"></audio>
+            </div>
+            <div class="button">
+                <p>死んできます!!</p>
+                <audio src="audio/gonna_die.wav"></audio>
+            </div>
+            <div class="button">
+                <p>でっけぇ虫いんな</p>
+                <audio src="audio/big_bug.wav"></audio>
+            </div>
+            <div class="button">
+                <p>認知してぇ!</p>
+                <audio src="audio/accept.wav"></audio>
+            </div>
+            <div class="button special">
+                <p>啼け</p>
+                <p>(なかひろ)チーズ</p>
+                <audio src="audio/cheese_sum2.wav"></audio>
+            </div>
         </div>
     </div>
     <script>
-        $('.button').each((i, e) => {
-            $(e).on('click', () => {
-                $(e).find('audio').get(0).play();
+        $('.button_area .button').each((i, elem) => {
+            // set click event (audio play)
+            $(elem).on('click', () => {
+                $(elem).find('audio').get(0).play();
             });
+
+            // set drag event
+            elem.setAttribute('draggable', true);
+            $(elem).on('dragstart', (e) => {
+                e.originalEvent.dataTransfer.setData('text/html', elem.outerHTML);
+            });
+        });
+        
+        $('#playlist').on('dragenter', (e) => {
+            if(!is_locked) {
+                $('#playlist').addClass('mark');
+            }
+        });
+        $('#playlist').on('dragleave', (e) => {
+            $('#playlist').removeClass('mark');
+        });
+        $('#playlist').on('dragover', (e) => {
+            e.originalEvent.preventDefault();
+        });
+        
+        let is_locked = false; // I wish this variable doesn't cause race condition. 
+        $('#playlist').on('drop', (e) => {
+            $('#playlist').removeClass('mark');
+            if(!is_locked) {
+                let template = document.createElement('template');
+                template.innerHTML = e.originalEvent.dataTransfer.getData('text/html');
+                $('#playlist').append(template.content.firstChild);
+            }
+        });
+
+        $('#play_all_btn').on('click', () => {
+            // lock edit
+            is_locked = true;
+            $('#playlist').addClass('locked');
+
+            // collect audios
+            let audios = [];
+            $('#playlist .button').each((i, elem) => {
+                audios.push($(elem).find('audio').get(0));
+            });
+
+            let num_of_audios = audios.length;
+            if(num_of_audios <= 0) {
+                // unlock and exit
+                is_locked = false;
+                $('#playlist').removeClass('locked');
+                return;
+            }
+
+            for(let i = 0; i < num_of_audios; i++) {
+                audios[i].onended = () => {
+                    if(i+1 < num_of_audios) {
+                        // click next elem
+                        audios[i+1].play();
+                    }
+                    else {
+                        // unlock and exit
+                        is_locked = false;
+                        $('#playlist').removeClass('locked');
+                    }
+                }
+            }
+
+            audios[0].play();
+        });
+        $('#remove_all_btn').on('click', () => {
+            if(!is_locked){
+                $('#playlist .button').remove();
+            }
         });
     </script>
 </body>

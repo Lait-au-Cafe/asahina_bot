@@ -51,6 +51,63 @@ header > h1 {
 
 .container {
     display: flex;
+    flex-direction: row-reverse;
+}
+
+.side_bar {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    margin-left: auto;
+}
+
+#controller {
+    height: 50px;
+}
+
+#controller ul { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+#controller ul li {
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 2px;
+    padding: 2px 5px;
+    border: solid 2px dimgray;
+    border-radius: 5px;
+}
+
+#play_all_btn {
+    flex: 1;
+    background-color: lightpink;
+}
+
+#playlist {
+    flex: 1;
+    color: gray;
+    border: solid 5px gray;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#playlist.mark {
+    border: solid 5px tomato;
+}
+#playlist.locked {
+    border: solid 5px palegreen;
+}
+
+.button_area {
+    flex: 1;
+    display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
