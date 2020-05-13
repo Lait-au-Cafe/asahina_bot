@@ -76,6 +76,7 @@ header > h1 {
 .container {
     display: flex;
     flex-direction: row-reverse;
+    /* align-items: flex-start; */
 }
 
 .side_bar {
