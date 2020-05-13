@@ -235,7 +235,12 @@
         $('.button_area .button').each((i, elem) => {
             // set click event (audio play)
             $(elem).on('click', () => {
-                $(elem).find('audio').get(0).play();
+                let audio = $(elem).find('audio').get(0);
+                audio.onended = () => {
+                    $(elem).removeClass('target');
+                }
+                $(elem).addClass('target');
+                audio.play();
             });
 
             // set drag event
@@ -281,7 +286,7 @@
         $('#play_all_btn').on('click', () => {
             // lock edit
             is_locked = true;
-            $('#playlist').addClass('locked');
+            $('#playlist').addClass('playing');
 
             // collect audios
             let audios = [];
@@ -293,24 +298,27 @@
             if(num_of_audios <= 0) {
                 // unlock and exit
                 is_locked = false;
-                $('#playlist').removeClass('locked');
+                $('#playlist').removeClass('playing');
                 return;
             }
 
             for(let i = 0; i < num_of_audios; i++) {
                 audios[i].onended = () => {
+                    $($('#playlist .button')[i]).removeClass('target');
                     if(i+1 < num_of_audios) {
                         // click next elem
+                        $($('#playlist .button')[i+1]).addClass('target');
                         audios[i+1].play();
                     }
                     else {
                         // unlock and exit
                         is_locked = false;
-                        $('#playlist').removeClass('locked');
+                        $('#playlist').removeClass('playing');
                     }
                 }
             }
 
+            $($('#playlist .button')[0]).addClass('target');
             audios[0].play();
         });
         $('#remove_all_btn').on('click', () => {
