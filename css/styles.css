@@ -3,6 +3,7 @@ body {
     font-weight: bold;
     max-width: 900px;
     margin: auto;
+    background-color: rgb(255, 252, 254);
 }
 
 header > h1 {
@@ -17,34 +18,57 @@ header > h1 {
     flex-direction: column;
     align-items: center;
     background-color: lavenderblush;
+    border-radius: 20px;
+    box-shadow: inset -2.5px -2.5px 0 rgba(0, 0, 0, 0.1);
 }
 
-#intro > img {
+#profile {
+    display: flex;
+    flex-direction: column;
+}
+
+#portrait {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#portrait > img {
     width: 150px;
     height: 150px;
     border-radius: 75px;;
 }
 
-#intro > ul {
-    list-style-type: none;
+#profile > p {
+    font-size: large;
+}
+
+#profile ul {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
 }
 
-#intro > ul li {
-    margin: 5px;
+#profile ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#intro > ul li a {
-    margin: 5px;
+#profile ul > li > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-decoration: none;
 }
 
-#intro > ul li a img {
-    height: 30px;
+#profile ul > li > a > img {
+    max-width: 30px;
+    max-height: 30px;
 }
 
-#notion {
+#description {
     height: 200px;
     margin: 10px;
 }
