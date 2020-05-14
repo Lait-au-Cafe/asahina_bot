@@ -36,7 +36,8 @@ header > h1 {
 #portrait > img {
     width: 150px;
     height: 150px;
-    border-radius: 75px;;
+    border-radius: 80px;
+    /* border: double 8px hotpink; */
 }
 
 #profile > p {
