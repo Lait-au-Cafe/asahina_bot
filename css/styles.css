@@ -72,6 +72,9 @@ header > h1 {
     height: 200px;
     margin: 10px;
 }
+#description > p > * {
+    vertical-align: text-bottom;
+}
 
 .container {
     display: flex;
