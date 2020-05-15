@@ -1,6 +1,9 @@
 (function(){
     'use strict';
 
+    //=====================================================
+    // Set click event and drag event to each button. 
+    //=====================================================
     $('.button_area .button').each((i, elem) => {
         // set click event (audio play)
         $(elem).on('click', () => {
@@ -18,7 +21,10 @@
             e.originalEvent.dataTransfer.setData('text/html', elem.outerHTML);
         });
     });
-    
+
+    //=====================================================
+    // Set reaction when button is dropped to playlist area. 
+    //=====================================================
     $('#playlist').on('dragenter', (e) => {
         if(!is_locked) {
             $('#playlist').addClass('mark');
@@ -31,6 +37,7 @@
         e.originalEvent.preventDefault();
     });
     
+    /*=== Drop Event ===*/
     let is_locked = false; // I wish this variable doesn't cause race condition. 
     $('#playlist').on('drop', (e) => {
         $('#playlist').removeClass('mark');
@@ -54,6 +61,7 @@
         }
     });
 
+    /*=== Click Event ===*/
     $('#play_all_btn').on('click', () => {
         // lock edit
         is_locked = true;
@@ -98,10 +106,13 @@
         }
     });
 
-    $('.button_area').on('dragover', (e) => {
-        e.originalEvent.preventDefault();
-    });
+    // $('.button_area').on('dragover', (e) => {
+    //     e.originalEvent.preventDefault();
+    // });
 
+    //=====================================================
+    // Filter
+    //=====================================================
     const filter_input_area = $('#filter_input_area');
     filter_input_area.on('input', (e) => {
         // reset
