@@ -81,6 +81,7 @@ header > h1 {
     display: flex;
     flex-direction: row-reverse;
     /* align-items: flex-start; */
+    position: relative;
 }
 
 .side_bar {
@@ -132,6 +133,7 @@ header > h1 {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
 
+.mini_twitter_btn,
 .remove_btn {
     position: absolute;
     top: 5px; right: 5px;
@@ -140,6 +142,11 @@ header > h1 {
     font-size: x-large;
     text-align: center;
     line-height: 30px;
+}
+
+.mini_twitter_btn img {
+    max-width: 30px;
+    max-height: 30px;
 }
 
 #playlist {
@@ -161,6 +168,34 @@ header > h1 {
 
 .main {
     flex: 1;
+}
+
+.container .loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.8);
+    z-index: 2;
+    border-radius: 10px;
+
+    transition-delay: 0s;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .loading.done {
+    transition: opacity 300ms, visibility 0s ease 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .loading p {
+    font-size: xx-large;
+    color: ghostwhite;
+    text-align: center;
 }
 
 .search_area {

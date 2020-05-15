@@ -27,3 +27,13 @@ for elem in driver.find_elements_by_class_name("button"):
     audio_filename = os.path.splitext(os.path.basename(audio_path))[0]
     print(f"{audio_filename}: ({top}, {left}, {width}, {height})")
     cv2.imwrite(f"img/{audio_filename}.png", image[top:top+height, left:left+width])
+
+    # c = elem.get_attribute('class')
+    # voice_type = 0
+    # if 'basic' in c: voice_type = 0
+    # elif 'reply' in c: voice_type = 1
+    # elif 'longer' in c: voice_type = 3
+    # elif 'special' in c: voice_type = 4
+    # else: voice_type = 2
+    # dispname = elem.text.replace("\n", "\\n")
+    # print(f'{{ "dispname": "{dispname}", "filename": "{os.path.basename(audio_path)}", "type": "{voice_type}" }},')
