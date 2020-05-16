@@ -145,7 +145,7 @@ jQuery(document).ready(function(){
             `.trim();
             const mini_twitter_btn = template.content.firstChild;
             $(mini_twitter_btn).on('click', (e) => {
-                e.stopPropagation();
+                //e.stopPropagation();
             });
             $(btn).append(mini_twitter_btn)
         }
