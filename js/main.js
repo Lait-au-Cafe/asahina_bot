@@ -24,6 +24,7 @@ jQuery(document).ready(function(){
             { "dispname": "ｱﾊﾊﾊw", "filename": "laugh.wav", "type": "1" },
             { "dispname": "ひょえ～", "filename": "hyoe.wav", "type": "1" },
             { "dispname": "ああいいっすね", "filename": "fine.wav", "type": "1" },
+            { "dispname": "ふ～ん、なるほどね", "filename": "isee.wav", "type": "1" },
             { "dispname": "まじぃ～？", "filename": "really.wav", "type": "1" },
             { "dispname": "でしょ？", "filename": "right.wav", "type": "1" },
             { "dispname": "どした～？", "filename": "whatswrong.wav", "type": "1" },
