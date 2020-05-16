@@ -10,7 +10,7 @@ options.add_argument('--headless')
 
 driver = webdriver.Chrome(r"D:\Program Files\Selenium\chromedriver.exe", chrome_options=options)
 driver.implicitly_wait(5)
-driver.get(f"file:///{filepath}")
+driver.get(f"file:///{filepath}?twitter_share_btn=0")
 window_width = driver.execute_script('return document.body.scrollWidth')
 window_height = driver.execute_script('return document.body.scrollHeight')
 driver.set_window_size(window_width, window_height + 100)

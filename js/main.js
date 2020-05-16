@@ -83,6 +83,17 @@ jQuery(document).ready(function(){
         ]
     };
 
+    function parseURL(url) {
+        let params_str = location.search.substring(1).split('&');
+        let params = {};
+        params_str.forEach((p) => {
+            let key_and_val = p.split('=');
+            params[key_and_val[0]] = key_and_val[1];
+        });
+        return params;
+    }
+    const url_params = parseURL();
+
     //=====================================================
     // Deploy buttons. 
     //=====================================================
@@ -124,15 +135,20 @@ jQuery(document).ready(function(){
         $(btn).addClass(classname);
 
         // twitter share button
-        // template = document.createElement('template');
-        // template.innerHTML = '<div class="remove_btn"><i class="far fa-trash-alt"></i></div>';
-        // template.innerHTML = `
-        //     <div class="mini_twitter_btn">
-        //         <a href="https://twitter.com/share?text=「${prop['dispname']}」&url=https://lait-au-cafe.github.io/asahina_bot/&hashtags=美夜ボタン" target="_blank"><img src="icons/twitter.png"></a>
-        //     </div>
-        // `.trim();
-        // const mini_twitter_btn = template.content.firstChild;
-        // $(btn).append(mini_twitter_btn)
+        if(!url_params['twitter_share_btn']) {
+            let page_name = `${prop['filename'].split('.')[0]}`;
+            template = document.createElement('template');
+            template.innerHTML = `
+                <div class="mini_twitter_btn">
+                    <a href="https://twitter.com/share?text=「${prop['dispname']}」&url=https://lait-au-cafe.github.io/asahina_bot/btn_pages/${page_name}.html&hashtags=美夜ボタン" target="_blank"><img src="icons/twitter.png"></a>
+                </div>
+            `.trim();
+            const mini_twitter_btn = template.content.firstChild;
+            $(mini_twitter_btn).on('click', (e) => {
+                e.stopPropagation();
+            });
+            $(btn).append(mini_twitter_btn)
+        }
 
         $('.button_area').append(btn);
     }
@@ -182,6 +198,8 @@ jQuery(document).ready(function(){
             template.innerHTML = e.originalEvent.dataTransfer.getData('text/html');
             let btn_body = template.content.firstChild;
             btn_body.setAttribute('draggable', false);
+
+            $(btn_body).find('.mini_twitter_btn').remove()
 
             template = document.createElement('template');
             template.innerHTML = '<div class="remove_btn"><i class="far fa-trash-alt"></i></div>';

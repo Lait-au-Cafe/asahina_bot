@@ -145,6 +145,9 @@ header > h1 {
 }
 
 .mini_twitter_btn img {
+    display: flex;
+}
+.mini_twitter_btn img {
     max-width: 30px;
     max-height: 30px;
 }
