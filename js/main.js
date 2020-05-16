@@ -103,7 +103,7 @@ jQuery(document).ready(function(){
         let template = document.createElement('template');
         template.innerHTML = `
             <div class="button">
-                <audio src="audio/${prop["filename"]}"></audio>
+                <audio src="audio/${prop["filename"]}" preload="none"></audio>
             </div>
         `.trim();
         const btn = template.content.firstChild;
