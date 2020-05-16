@@ -164,7 +164,7 @@ jQuery(document).ready(function(){
                 $(elem).removeClass('target');
             }
             $(elem).addClass('target');
-            console.log(`[${ $(elem).find('audio').attr('src')}] State: ${audio.readyState}`)
+            // console.log(`[${ $(elem).find('audio').attr('src')}] State: ${audio.readyState}`)
             audio.play();
         });
 
