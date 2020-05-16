@@ -13,8 +13,10 @@ jQuery(document).ready(function(){
             { "dispname": "はい!", "filename": "yes.wav", "type": "1" },
             { "dispname": "了解です", "filename": "roger.wav", "type": "1" },
             { "dispname": "わかる", "filename": "agree.wav", "type": "1" },
+            { "dispname": "ちょっと\nわかるんだよなぁ…", "filename": "agreeabit.wav", "type": "1" },
             { "dispname": "なるほどぉ!", "filename": "igotit.wav", "type": "1" },
             { "dispname": "やったー!", "filename": "ididit.wav", "type": "1" },
+            { "dispname": "ごめんなさい!", "filename": "sorry.wav", "type": "1" },
             { "dispname": "ふん!", "filename": "hun.wav", "type": "1" },
             { "dispname": "やだ!", "filename": "yada.wav", "type": "1" },
             { "dispname": "はぁ?", "filename": "what.wav", "type": "1" },
@@ -52,6 +54,8 @@ jQuery(document).ready(function(){
             { "dispname": "ホントにゴミね", "filename": "reallytrash.wav", "type": "2" },
             { "dispname": "ママ～?", "filename": "mama.wav", "type": "2" },
             { "dispname": "パパ!", "filename": "papa3.wav", "type": "2" },
+            { "dispname": "おじいちゃん…", "filename": "granpa.wav", "type": "2" },
+            { "dispname": "グランパ", "filename": "granpa-001.wav", "type": "2" },
             { "dispname": "はらへった", "filename": "hungry.wav", "type": "2" },
             { "dispname": "任せてくださいよ", "filename": "leave_it_to_me.wav", "type": "2" },
             { "dispname": "面白いこと言いますね", "filename": "interesting.wav", "type": "2" },
@@ -64,11 +68,14 @@ jQuery(document).ready(function(){
             { "dispname": "痛いってだから!!", "filename": "ithurts.wav", "type": "3" },
             { "dispname": "やめなさいって言ってるでしょうがぁ!", "filename": "isaystopit.wav", "type": "3" },
             { "dispname": "火葬される!", "filename": "gannaburn.wav", "type": "3" },
+            { "dispname": "殴り殺すぞ\nマジでお前", "filename": "slaughter.wav", "type": "3" },
+            { "dispname": "開けてよぉ", "filename": "plzopen.wav", "type": "3" },
             { "dispname": "でっけぇ虫いんな", "filename": "big_bug.wav", "type": "3" },
             { "dispname": "いらっしゃいませ～", "filename": "welcome.wav", "type": "3" },
             { "dispname": "認知してぇ!", "filename": "accept.wav", "type": "3" },
             { "dispname": "育て方が良かったんかなやっぱ", "filename": "igrew.wav", "type": "3" },
             { "dispname": "男の子として生きていけばいい?", "filename": "liveasboy.wav", "type": "3" },
+            { "dispname": "何も失うものが\nねぇんだ", "filename": "nothingtolose.wav", "type": "3" },
             { "dispname": "はぁ!?ナメてんのぉ??", "filename": "nameteru.wav", "type": "3" },
             { "dispname": "botです!!", "filename": "imbot.wav", "type": "3" },
             { "dispname": "啼け\n(なかひろ)チーズ", "filename": "cheese_sum2.wav", "type": "4" },
@@ -90,7 +97,6 @@ jQuery(document).ready(function(){
         const btn = template.content.firstChild;
 
         // set display name
-        console.log(prop['dispname'].split('\n'))
         prop['dispname'].split('\n').forEach((line) => {
             $(btn).append(`<p>${line}</p>`);
         });
