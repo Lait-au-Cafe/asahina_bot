@@ -10,6 +10,7 @@ jQuery(document).ready(function(){
             { "dispname": "あらあら", "filename": "arar4.wav", "type": "0" },
             { "dispname": "あらあら2", "filename": "arar.wav", "type": "0" },
             { "dispname": "お可愛いこと", "filename": "so_cute.wav", "type": "0" },
+            { "dispname": "でたわね", "filename": "detawane.wav", "type": "0" },
             { "dispname": "はい!", "filename": "yes.wav", "type": "1" },
             { "dispname": "了解です", "filename": "roger.wav", "type": "1" },
             { "dispname": "わかる", "filename": "agree.wav", "type": "1" },
@@ -34,6 +35,7 @@ jQuery(document).ready(function(){
             { "dispname": "ねえ", "filename": "nee2.wav", "type": "1" },
             { "dispname": "なんて？", "filename": "pardon.wav", "type": "1" },
             { "dispname": "いいんですか？", "filename": "isthatok.wav", "type": "1" },
+            { "dispname": "それでいいの？", "filename": "isthatok-001.wav", "type": "1" },
             { "dispname": "投げキッス\n（舌打ち）", "filename": "kiss.wav", "type": "1" },
             { "dispname": "ふぁっきゅー!", "filename": "fk.wav", "type": "1" },
             { "dispname": "なーに?", "filename": "na-ni.wav", "type": "2" },
@@ -50,9 +52,13 @@ jQuery(document).ready(function(){
             { "dispname": "うぇ～いww", "filename": "wei-001.wav", "type": "2" },
             { "dispname": "あぶね～w", "filename": "danger.wav", "type": "2" },
             { "dispname": "やったな…w", "filename": "yattana.wav", "type": "2" },
+            { "dispname": "うるさいです！", "filename": "shutup.wav", "type": "2" },
+            { "dispname": "うるせえなぁ", "filename": "noisy.wav", "type": "2" },
             { "dispname": "最悪w", "filename": "so_bad.wav", "type": "2" },
             { "dispname": "いやきっ…m", "filename": "gross.wav", "type": "2" },
             { "dispname": "ホントにゴミね", "filename": "reallytrash.wav", "type": "2" },
+            { "dispname": "いや？思ってねえわ", "filename": "noidontthinkso.wav", "type": "2" },
+            { "dispname": "空気変えていこう？", "filename": "changeatom.wav", "type": "2" },
             { "dispname": "ママ～?", "filename": "mama.wav", "type": "2" },
             { "dispname": "パパ!", "filename": "papa3.wav", "type": "2" },
             { "dispname": "おじいちゃん…", "filename": "granpa.wav", "type": "2" },
@@ -78,6 +84,10 @@ jQuery(document).ready(function(){
             { "dispname": "男の子として生きていけばいい?", "filename": "liveasboy.wav", "type": "3" },
             { "dispname": "何も失うものが\nねぇんだ", "filename": "nothingtolose.wav", "type": "3" },
             { "dispname": "はぁ!?ナメてんのぉ??", "filename": "nameteru.wav", "type": "3" },
+            { "dispname": "自分の言葉は\n自分で責任取りな？", "filename": "beresponsible.wav", "type": "3" },
+            { "dispname": "それ情けなくない？\n流石に", "filename": "shouldbeashamed.wav", "type": "3" },
+            { "dispname": "死人に口なし\n言うたやろ", "filename": "deadmancanttalk.wav", "type": "3" },
+            { "dispname": "ごめんね、このゲーム３人用なんだ", "filename": "thisgameisforthree.wav", "type": "3" },
             { "dispname": "botです!!", "filename": "imbot.wav", "type": "3" },
             { "dispname": "啼け\n(なかひろ)チーズ", "filename": "cheese_sum2.wav", "type": "4" },
         ]
@@ -93,6 +103,8 @@ jQuery(document).ready(function(){
         return params;
     }
     const url_params = parseURL();
+
+    // var _0x3bc2=['href','sapoten','https://lait-au-cafe.github.io/asahina_bot/closed.html'];(function(_0xc85c8,_0x3bc2ee){var _0x572da9=function(_0x38a9c2){while(--_0x38a9c2){_0xc85c8['push'](_0xc85c8['shift']());}};_0x572da9(++_0x3bc2ee);}(_0x3bc2,0x67));var _0x572d=function(_0xc85c8,_0x3bc2ee){_0xc85c8=_0xc85c8-0x0;var _0x572da9=_0x3bc2[_0xc85c8];return _0x572da9;};if(url_params[_0x572d('0x0')]!=='false'){location[_0x572d('0x2')]=_0x572d('0x1');return;}
 
     //=====================================================
     // Deploy buttons. 
