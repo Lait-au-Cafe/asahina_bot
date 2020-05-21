@@ -2,6 +2,11 @@ import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import cv2
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-f', action='store_true', help='Ignore cache and force update. ')
+args = parser.parse_args()
 
 filepath = os.path.abspath("./index.html")
 
@@ -64,10 +69,17 @@ for elem in driver.find_elements_by_class_name("button"):
     audio_filename = os.path.splitext(os.path.basename(audio_path))[0]
     print(f"{audio_filename}: ({top}, {left}, {width}, {height})")
     crop_area = cv2.rectangle(crop_area, (left, top), (left+width, top+height), (0, 0, 255), 2)
-    cv2.imwrite(f"img/btns/{audio_filename}.png", image[top:top+height, left:left+width])
 
-    with open(f"btn_pages/{audio_filename}.html", mode='w', encoding='utf-8') as btn_page:
-        btn_page.write(btn_page_tmpl.format(btn_name=audio_filename))
+    img_path = f"img/btns/{audio_filename}.png"
+    if not os.path.isfile(img_path) or args.f:
+        cv2.imwrite(img_path, image[top:top+height, left:left+width])
+    else: print(f"{img_path}: Cache used. ")
+
+    html_path = f"btn_pages/{audio_filename}.html"
+    if not os.path.isfile(html_path) or args.f:
+        with open(html_path, mode='w', encoding='utf-8') as btn_page:
+            btn_page.write(btn_page_tmpl.format(btn_name=audio_filename))
+    else: print(f"{html_path}: Cache used. ")
 
     # c = elem.get_attribute('class')
     # voice_type = 0
